@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Strength Checker</title>
     <style>
+
         .input{
             background-color: rgb(158, 247, 247);
         }
         body{
             background-color: antiquewhite;
+            padding: 100px;
+            border: 40px;
+            border-radius: 20px;
+            margin: 10px;
+            box-shadow: 0 20px 30px;
+            cursor: pointer;
+            width: 300px;
+            height: 200px;
         }
         .Box{
             width: 300px;
-            height: 250px;
             border-radius: 25px;
+            height: 300px;
             color: rgb(243, 19, 19);
             text-align: center;
         }
@@ -26,6 +35,7 @@
         <h2>Password Strength Checker</h2>
         <input  class="input" type="password" id="pass" placeholder="Enter password" onkeyup="checkPassword()" >  <!--  runs func when user releases a key on keyboard -->
         <h3 id="message" ></h3>
+                
     </div>
 
     <script>
