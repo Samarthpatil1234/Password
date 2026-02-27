@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <style>
+        .input{
+            background-color: rgb(158, 247, 247);
+        }
+        body{
+            background-color: antiquewhite;
+        }
+        .Box{
+            width: 300px;
+            height: 250px;
+            border-radius: 25px;
+            color: rgb(243, 19, 19);
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="Box">
+        <h2>Password Strength Checker</h2>
+        <input  class="input" type="password" id="pass" placeholder="Enter password" onkeyup="checkPassword()" >  <!--  runs func when user releases a key on keyboard -->
+        <h3 id="message" ></h3>
+    </div>
+
+    <script>
+        function checkPassword(){
+            let pwd=document.getElementById("pass").value
+            let message=document.getElementById("message")
+            
+        if(pwd.length===0){
+            message.innerText=""
+        }else if(pwd.length<5){
+            message.innerText="Weak password"
+            message.style.color="red"
+        }else if(pwd.length>=5 && pwd.length<8){
+            message.innerText="Medium password"
+            message.style.color="orange"
+
+        }else{
+            message.innerText="Strong password"
+            message.style.color="green"
+
+        }
+        }
+    </script>
+
+    
+</body>
+</html>
